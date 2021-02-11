@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --softmagenta: hsl(300, 69%, 71%);
+
+  --headerfont: 'Poppins', sans-serif;
+  --headernormal: 400;
+  --headerbold: 600;
+
+  --bodyfont: 'Open Sans', sans-serif;
+  --bodynormal: 400;
+}
+
+body {
+  background-color: var(--violet);
+  font-size: 16px;
+}
+
+.container {
+  background: url(./images/bg-desktop.svg) no-repeat;
+  background-size: contain;
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+}
+
+main {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(20%, 1fr));
+  gap: 5rem;
+}
+
+main .hero-img img {
+  width: 100%;
+}
+
+main .cta-content {
+  color: #fff;
+  align-self: center;
+  padding: 0 5rem;
+}
+
+main .cta-content h1 {
+  font-family: var(--headerfont);
+  font-weight: var(--headerbold);
+  font-size: 2.5rem;
+}
+
+main .cta-content p {
+  font-family: var(--bodyfont);
+  font-weight: var(--bodynormal);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+main .cta-content button {
+  font-family: var(--headerfont);
+  font-size: 1rem;
+  padding: 1rem 4rem;
+  border-radius: 50px;
+  color: var(--violet);
+}
+
+main .cta-content button:hover {
+  cursor: pointer;
+  background-color: var(--softmagenta);
+  color: #fff;
+}
+
+footer {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+footer .social {
+  color: #fff;
+  text-align: right;
+}
+
+footer .social i {
+  border: 2px solid #fff;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+footer .social i:hover {
+  border: 2px solid var(--softmagenta);
+  color: var(--softmagenta);
+  cursor: pointer;
+}
+
+footer .attribution {
+  color: #fff;
+  text-align: center;
+  font-family: var(--headerfont);
+}
+
+footer .attribution a {
+  color: var(--softmagenta);
+}
+
+footer .attribution a:hover {
+  color: #fff;
+}
+
+@media all and (max-width: 960px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  main .cta-content {
+    text-align: justify;
+  }
+
+  main .cta-content h1 {
+    font-size: 2rem;
+  }
+
+  footer .social {
+    text-align: center;
+  }
+}
